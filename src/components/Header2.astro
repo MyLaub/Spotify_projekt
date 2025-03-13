@@ -1,0 +1,120 @@
+<header class="navbar">
+  <div class="navbar-left">
+    <img src="img/logo_hvid_png.png" alt="Spotify Logo" class="logo" />
+    <img src="img/home.svg" alt="Home" class="home-icon" />
+    <div class="search-bar">
+      <input type="text" placeholder="What do you want to play?" />
+      <img src="img/search.svg" alt="Search Icon" class="search-icon" />
+    </div>
+  </div>
+
+  <div class="navbar-right">
+    <nav>
+      <a href="#">Premium</a>
+      <a href="#">Support</a>
+      <a href="#">Download</a>
+      <img src="img/download.svg" alt="download" class="download" />
+      <a href="#">Install App</a>
+      <a href="#">Sign up</a>
+      <button class="login-btn">Log in</button>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo {
+    width: 30px;
+    height: auto;
+  }
+
+  .home-icon {
+    width: 25px;
+    height: auto;
+  }
+
+  .download {
+    width: 25px;
+    height: auto;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    border-radius: 50px;
+    padding: 5px 15px;
+    width: 300px;
+  }
+
+  .search-bar input {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .search-bar input::placeholder {
+    color: #b3b3b3;
+  }
+
+  .search-icon {
+    width: 20px;
+    height: auto;
+    margin-left: 5px;
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Øger mellemrum mellem elementerne */
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Gør mellemrum mellem teksterne større */
+  }
+
+  nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .login-btn {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 20px; /* Skaber ekstra afstand til de andre elementer */
+  }
+</style>
