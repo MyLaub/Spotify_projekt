@@ -1,0 +1,33 @@
+---
+import Card from "../components/Card.astro";
+
+const artists = [
+  { billede: "https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill", artistname: "Miley Cyrus", type: "Artist" },
+  { billede: "https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill", artistname: "Drake", type: "Artist" },
+  { billede: "https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill", artistname: "Billie Eilish", type: "Artist" },
+  { billede: "https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill", artistname: "The Weeknd", type: "Artist" },
+  { billede: "https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill", artistname: "Ariana Grande", type: "Artist" },
+  { billede: "https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill", artistname: "Ed Sheeran", type: "Artist" },
+  { billede: "https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill", artistname: "Taylor Swift", type: "Artist" },
+  { billede: "https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill", artistname: "Post Malone", type: "Artist" },
+  { billede: "https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill", artistname: "Beyoncé", type: "Artist" },
+  { billede: "https://via.assets.so/album.png?id=10&q=95&w=360&h=360&fit=fill", artistname: "Kanye West", type: "Artist" },
+];
+---
+
+<main>
+  <section class="popular_artists">
+    {% for artist in artists %}
+      <Card billede={artist.billede} artistname={artist.artistname} type={artist.type} />
+    {% endfor %}
+  </section>
+</main>
+
+<style>
+  .popular_artists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+</style>

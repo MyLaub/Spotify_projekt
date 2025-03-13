@@ -1,0 +1,33 @@
+---
+import Knap from "../components/Knap.astro";
+
+const { overskrift, brødtekst, knaptekst } = Astro.props;
+---
+
+<article class="playlist-card">
+  <h3 class="playlist_h3">{overskrift}</h3>
+  <p class="hvid_p">{brødtekst}</p>
+  <Knap indhold={knaptekst} />
+</article>
+
+<style>
+  .playlist-card {
+    background-color: #181818;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .playlist_h3 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .hvid_p {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+  }
+</style>

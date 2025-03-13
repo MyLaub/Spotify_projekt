@@ -1,0 +1,27 @@
+---
+const { albumname, artistname, billede } = Astro.props;
+---
+
+<article class="card2">
+  <img src={billede} alt={artistname} />
+  <h3>{albumname}</h3>
+  <p class="gaa_p">{artistname}</p>
+</article>
+
+<style>
+  .card2 {
+    background-color: #1f1f1f;
+    color: black;
+    text-align: left;
+    padding: 1rem;
+    border-radius: px;
+    width: 150px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+</style>
