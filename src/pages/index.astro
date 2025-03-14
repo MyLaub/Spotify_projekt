@@ -9,14 +9,14 @@ import Header2 from "../components/Header2.astro";
 ---
 
 <Layout>
-  <body>
-    <Header2 />
-    <main>
-      <section class="sidebar">
-        <PlaylistCard overskrift="Create your first playlist" brødtekst="It's easy, we'll help you" knaptekst="Create playlist" />
-        <PlaylistCard overskrift="Let's find some podcasts to follow" brødtekst="We'll keep you updated on new episodes" knaptekst="Create Browse podcasts" />
-      </section>
+  <Header2 />
+  <main>
+    <section class="sidebar">
+      <PlaylistCard overskrift="Create your first playlist" brødtekst="It's easy, we'll help you" knaptekst="Create playlist" />
+      <PlaylistCard overskrift="Let's find some podcasts to follow" brødtekst="We'll keep you updated on new episodes" knaptekst="Browse podcasts" />
+    </section>
 
+    <section class="card_background">
       <section class="music">
         <h2>Popular artists</h2>
         <section class="popular_artists">
@@ -46,8 +46,8 @@ import Header2 from "../components/Header2.astro";
           <Card2 billede="https://via.assets.so/album.png?id=10&q=95&w=360&h=360&fit=fill" albumname="My Beautiful Dark Twisted Fantasy" artistname="Kanye West" />
         </section>
       </section>
-    </main>
-  </body>
+    </section>
+  </main>
 </Layout>
 
 <style>
